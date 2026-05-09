@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #fff0f5 0%, #ffe4ec 100%);
+  color: #5b4b52;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 小猪水印背景 */
+body::before {
+  content: "🐷 🐷 🐷 🐷 🐷";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-18deg);
+}
+
+/* 页面主体 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 顶部区域 */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 40px 20px;
+  border-radius: 32px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.25);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 12px;
+  color: #ff6f91;
+}
+
+.hero p {
+  color: #9c7b87;
+  font-size: 18px;
+}
+
+/* 车队标题 */
+.team-section h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #ff6f91;
+}
+
+/* 卡片排列 */
+}
