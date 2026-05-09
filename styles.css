@@ -61,8 +61,62 @@ body::before {
   font-size: 28px;
   color: #ff6f91;
 }
-
 /* 卡片排列 */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* 卡片 */
+.team-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 182, 193, 0.35);
+  border-radius: 28px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 卡片角落小猪 */
+.team-card::after {
+  content: "🐷";
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  font-size: 42px;
+  opacity: 0.12;
+}
+
+/* 鼠标悬浮效果 */
+.team-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #ff8fb1;
+  box-shadow: 0 12px 30px rgba(255, 143, 177, 0.25);
+}
+
+.team-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #ff6f91;
+}
+
+.team-card p {
+  color: #7a626c;
+  line-height: 1.8;
+}
+
+/* 状态标签 */
+.status {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
 }
 /* 新增车队区域 */
 
@@ -107,4 +161,18 @@ body::before {
 
 .form-card button:hover {
   transform: scale(1.05);
+}
+.done {
+  background: rgba(134, 239, 172, 0.25);
+  color: #2f855a;
+}
+
+.waiting {
+  background: rgba(255, 214, 102, 0.25);
+  color: #b7791f;
+}
+
+.doing {
+  background: rgba(255, 182, 193, 0.35);
+  color: #c53030;
 }
