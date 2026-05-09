@@ -18,10 +18,29 @@
       </section>
 
       <!-- 车队区域 -->
+<!-- 新增车队 -->
+<section class="add-team-section">
+  <h2>新增车队</h2>
+
+  <div class="form-card">
+    <input id="team-name" type="text" placeholder="车队名称" />
+
+    <input id="team-leader" type="text" placeholder="队长" />
+
+    <input id="team-members" type="text" placeholder="成员（用逗号分隔）" />
+
+    <select id="team-status">
+      <option value="已发车">已发车</option>
+      <option value="缺奶">缺奶</option>
+      <option value="坐牢中">坐牢中</option>
+    </select>
+
+    <button id="add-team-btn">新增车队</button>
+  </div>
+</section>
       <section class="team-section">
         <h2>本周车队</h2>
-
-        <div class="team-grid">
+<div class="team-grid" id="team-grid">
           <!-- 卡片1 -->
           <div class="team-card">
             <h3>周一双十</h3>
@@ -48,5 +67,6 @@
         </div>
       </section>
     </main>
+<script src="./app.js"></script>
   </body>
 </html>
